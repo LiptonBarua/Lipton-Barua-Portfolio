@@ -2,26 +2,246 @@
 @tailwind components;
 @tailwind utilities;
 
-:root {
-  --foreground-rgb: 0, 0, 0;
-  --background-start-rgb: 214, 219, 220;
-  --background-end-rgb: 255, 255, 255;
-}
-
-@media (prefers-color-scheme: dark) {
-  :root {
-    --foreground-rgb: 255, 255, 255;
-    --background-start-rgb: 0, 0, 0;
-    --background-end-rgb: 0, 0, 0;
-  }
-}
 
 body {
-  color: rgb(var(--foreground-rgb));
-  background: linear-gradient(
-      to bottom,
-      transparent,
-      rgb(var(--background-end-rgb))
-    )
-    rgb(var(--background-start-rgb));
+  @apply text-gray-900 bg-[#d0d9f2] dark:bg-[#050312];
+}
+/* .............Banner................ */
+
+.backgroundImage{
+  background: url(https://github.com/LiptonBarua/My-Website-Client-Side/blob/main/src/assets/Image/Futuristic%20Modern%20Zoom%20Virtual%20Background.png?raw=true);
+  position: relative;
+  background-size: cover;
+  /* height: 700px; */
+}
+.backgroundImage::before{
+  content: '';
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+
+}
+.darkBackgroundImage{
+  background: url(https://github.com/LiptonBarua/My-Website-Client-Side/blob/main/src/assets/Image/Minimalist%20tech%20company%20zoom%20virtual%20background.png?raw=true);
+  position: relative;
+  background-size: cover;
+  /* height: 700px; */
+}
+.darkBackgroundImage::before{
+  content: '';
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+
+}
+
+
+/* ............Skill............ */
+
+
+
+.skl{
+  margin-left: 20px;
+  color: yellow;
+}
+.sklLine{
+ position: relative;
+ bottom: 8px;
+ visibility: hidden;
+ padding-left: 6px;
+ color: #1bacef;
+}
+.ProgWidth {
+ padding: 0px 20px 0 0;
+}
+.skillDiv {
+ height: 15px;
+ width: 100%;
+ background-color: gray;
+}
+.skillBar {
+ display: block;
+ height: 15px;
+ background-color: navy;
+}
+.darkSkillBar {
+ display: block;
+ height: 15px;
+ background-color: #1bacef;
+}
+.p {
+ display: flex;
+ justify-content: space-between;
+}
+
+.htmlBar {
+ width: 70%;
+ animation: html 3s 1s 15 forwards;
+}
+.cssBar {
+ width: 70%;
+ animation: css 3s 1s 15 forwards;
+}
+.jsBar {
+ width: 75%;
+ animation: js 3s 1s 15 forwards;
+}
+
+.javaBar {
+ width: 85%;
+ animation: java 3s 1s 15 forwards;
+}
+.ccpBar {
+ width: 80%;
+ animation: ccp 3s 1s 15 forwards;
+}
+.reactBar {
+ width: 10%;
+ animation: react 3s 1s 15 forwards;
+}
+.nodeBar {
+ width: 35%;
+ animation: node 3s 1s 15 forwards;
+}
+.sqlBar {
+ width: 85%;
+ animation: sql 3s 1s 15 forwards;
+}
+.expressBar{
+ width: 65%;
+ animation: express 3s 1s 15 forwards;
+}
+.nextBar{
+ width: 75%;
+ animation: express 3s 1s 15 forwards;
+}
+.divider{
+ color:navy;
+ font-weight: bold;
+}
+
+@keyframes html {
+ 0% {
+   width: 0%;
+ }
+ 100% {
+   width: 95%;
+ }
+}
+@keyframes css {
+ 0% {
+   width: 0%;
+ }
+ 100% {
+   width: 70%;
+ }
+}
+@keyframes js {
+ 0% {
+   width: 0%;
+ }
+ 100% {
+   width: 75%;
+ }
+}
+@keyframes java {
+ 0% {
+   width: 0%;
+ }
+ 100% {
+   width: 85%;
+ }
+}
+@keyframes ccp {
+ 0% {
+   width: 0%;
+ }
+ 100% {
+   width: 80%;
+ }
+}
+@keyframes react {
+ 0% {
+   width: 0%;
+ }
+ 100% {
+   width: 70%;
+ }
+}
+@keyframes node {
+ 0% {
+   width: 0%;
+ }
+ 100% {
+   width: 35%;
+ }
+}
+
+@keyframes sql {
+ 0% {
+   width: 0%;
+ }
+ 100% {
+   width: 85%;
+ }
+}
+
+@keyframes express {
+ 0% {
+   width: 0%;
+ }
+ 100% {
+   width: 65%;
+ }
+}
+@keyframes next {
+ 0% {
+   width: 0%;
+ }
+ 100% {
+   width: 75%;
+ }
+}
+
+
+
+/* .............Small Banner................. */
+
+
+.bannerDesign{
+  background-image: url(https://github.com/LiptonBarua/My-Website-Client-Side/blob/main/src/assets/Image/wBlack%20Modern%20Geometric%20Quotes%20Twitter%20Header.png?raw=true);
+  background-repeat: no-repeat;
+  
+}
+.darkBannerDesign{
+  background-image: url(https://github.com/LiptonBarua/My-Website-Client-Side/blob/main/src/assets/Image/Black%20Modern%20Geometric%20Quotes%20Twitter%20Header.png?raw=true);
+  background-repeat: no-repeat;   
+}
+
+
+/* ........CardProject.............. */
+
+
+.card-compact {
+  /* width: 400px; */
+  margin: auto;
+  border: 3px solid #2c2c2c89;
+  border-radius: 5px;
+  box-shadow: 5px 4px 30px 2px #83818189;
+  cursor: n-resize;
+}
+.card-compact img {
+  width: 100%;
+  object-fit: cover;
+  object-position: top;
+  height: 250px;
+  transition: 8s all ease;
+}
+
+.card-compact img:hover {
+  object-position: bottom;
 }
